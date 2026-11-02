@@ -1,0 +1,31 @@
+name: Proponi una funzionalità
+description: Suggerisci un miglioramento a CalcoloOre / OreChiare.
+title: "[Proposta]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Questa proposta e gli allegati sono pubblici. Non condividere informazioni personali o riservate."
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Prima di inviare
+      options:
+        - label: Ho cercato una proposta simile tra quelle esistenti.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Quale problema vuoi risolvere?
+      description: Descrivi il tuo caso d’uso con esempi inventati.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Miglioramento proposto
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative o soluzioni attuali

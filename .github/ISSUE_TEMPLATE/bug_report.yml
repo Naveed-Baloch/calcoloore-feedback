@@ -1,0 +1,61 @@
+name: Segnala un problema
+description: Segnala un problema riproducibile in CalcoloOre / OreChiare.
+title: "[Problema]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Questa segnalazione e gli allegati sono pubblici. Usa orari inventati. Non includere dati personali, cartellini reali, documenti aziendali o credenziali."
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Prima di inviare
+      options:
+        - label: Ho cercato una segnalazione simile tra quelle esistenti.
+          required: true
+        - label: Ho rimosso informazioni personali o riservate dal testo e dagli allegati.
+          required: true
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Dove si verifica il problema?
+      options:
+        - Ore lavorate giornaliere
+        - Ore lavorate settimanali
+        - Somma ore e minuti
+        - Ore decimali
+        - Modello Excel
+        - Copia, CSV o stampa
+        - Guide o accessibilità
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser e dispositivo
+      placeholder: "Esempio: Chrome su Android, Safari su iPhone, Firefox su Windows"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passaggi per riprodurre il problema
+      placeholder: "1. Apri…\n2. Inserisci orari inventati…\n3. Osserva…"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Risultato atteso
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Risultato ottenuto
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Esempio inventato o schermata senza dati personali
+      description: "Facoltativo. Condividi soltanto informazioni che puoi rendere pubbliche."
